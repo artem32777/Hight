@@ -429,6 +429,35 @@ h6 {
   left: 5%;
 }
 
+.content__info {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 9.375rem;
+  padding: 1.25rem;
+}
+
+.content__info:first-child {
+  margin-top: 110vh;
+}
+
+.content__info::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#72db70), color-stop(#dbd870), to(#db7070));
+  background: -o-linear-gradient(left, #72db70, #dbd870, #db7070);
+  background: linear-gradient(90deg, #72db70, #dbd870, #db7070);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: -1;
+  opacity: 0.8;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
 @media (any-hover: hover) {
   .hov {
     -webkit-transition: color 0.3s ease 0s;
